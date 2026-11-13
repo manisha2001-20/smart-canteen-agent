@@ -1,0 +1,27 @@
+[theme]
+base = "light"
+primaryColor = "#047857"
+backgroundColor = "#f5f7f6"
+secondaryBackgroundColor = "#eef3f0"
+textColor = "#0f172a"
+borderColor = "#e3e8e5"
+linkColor = "#047857"
+baseRadius = "12px"
+buttonRadius = "10px"
+showWidgetBorder = true
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+headingFont = "Plus Jakarta Sans:https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+headingFontWeights = [800, 700, 700, 700, 600, 600]
+
+[theme.sidebar]
+backgroundColor = "#053d30"
+secondaryBackgroundColor = "#0a4f3e"
+textColor = "#e7f5ef"
+borderColor = "#1d6b56"
+primaryColor = "#fbbf24"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false

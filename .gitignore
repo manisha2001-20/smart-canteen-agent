@@ -1,0 +1,38 @@
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Secrets - never commit real credentials (.env.example is the safe template)
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Local database files (contain user/order data; recreated automatically on startup)
+data/*.db
+data/*.db-journal
+data/*.sqlite
+data/*.sqlite3
+*.db-wal
+*.db-shm
+
+# Temporary / OS / editor files
+*.log
+*.tmp
+*.bak
+*~
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
