@@ -229,3 +229,9 @@ smart-canteen-agent/
 ├── data/canteen.db            # created automatically
 └── tests/                     # conftest + 3 test modules (29 tests)
 ```
+
+## Screenshots
+
+Student ordering page (local mode, no LLM configured):
+
+![Order Food page](docs/screenshots/order-food.png)
