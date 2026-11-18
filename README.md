@@ -4,6 +4,8 @@ A working prototype that lets students **order canteen food from their phone or 
 
 Built with **Python · Streamlit · SQLite · Pandas** and an **optional, pluggable LLM**. It runs fully offline without an API key.
 
+> **Group project.** Developed as an academic group project; this repository is published from my GitHub account.
+
 ---
 
 ## 1. Project Overview
@@ -29,6 +31,15 @@ Physical queues at the college canteen during short breaks cause long waits, cro
 5. **Notify** the student the moment food is READY.
 6. Give canteen staff a live dashboard, menu/stock control and analytics.
 7. Use a modular **multi-agent architecture** in which each agent can be replaced (for example, an ML wait-time model or a different LLM).
+
+### Key features (implemented)
+
+- Menu browsing and ordering by click or by plain-English text (with an optional LLM; a rule-based parser works offline).
+- Unique, sequential digital tokens (safe under concurrent orders).
+- Estimated ready time computed from the live kitchen queue.
+- Strict order-status workflow (Confirmed → Preparing → Ready → Collected) with timestamps and history.
+- In-app "food ready" notifications, with optional email.
+- PIN-protected staff dashboard: live order board, menu and stock control, analytics and an agent-activity log.
 
 ## 4. Agent Architecture
 
@@ -213,6 +224,12 @@ Tests use a temporary database and never touch `data/canteen.db`. Coverage:
 - Pickup time slots, and pre-ordering for a specific break
 - Student login via college SSO; role-based staff accounts
 - Multi-counter / multi-canteen support; PostgreSQL for campus-wide deployment
+
+## Validation & limitations
+
+- **Validation:** 29 automated pytest tests (order, token and full multi-agent workflow tests), run against a temporary database.
+- Prototype scope: a single canteen, SQLite storage and in-app notifications by default.
+- Not implemented yet (see Future Enhancements): payments, SMS/WhatsApp notifications, college SSO login and ML-based wait-time prediction.
 
 ## Project Structure
 
